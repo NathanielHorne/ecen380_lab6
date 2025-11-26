@@ -2,7 +2,7 @@ N = 40;
 n = (-N:N)'; % Make this a column vector to make hideal
 % a column vector because MATLAB's window
 % functions produce a column vector.
-hideal = myfunc(n); % This is your function to compute hideal.
+hideal = sinc(n/pi); % This is your function to compute hideal.
 % The equation for hideal was derived
 % in the previous step.
 % Remember that MATLAB and the textbook use
@@ -30,7 +30,7 @@ subplot(222); stem(n,h1); grid on; ylabel('h1[n]');
 subplot(223); stem(n,h2); grid on; ylabel('h2[n]');
 subplot(224); stem(n,h3); grid on; ylabel('h3[n]');
 figure(2);
-plot(F,20*log10(abs(H)),...
+plot(F,20*log10(abs(H0)),...
 F,20*log10(abs(H1)),...
 F,20*log10(abs(H2)),...
 F,20*log10(abs(H3)));
