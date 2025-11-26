@@ -30,14 +30,15 @@ H1 = polyval(h1,E);
 H2 = polyval(h2,E);
 H3 = polyval(h3,E);
 figure(1);
+sgtitle("Fourier Responses of Selected Window Functions");
 subplot(221); stem(n,h0); grid on; ylabel('hideal[n]');
-title("Simple Rect Function");
+title("Simple Rect");
 subplot(222); stem(n,h1); grid on; ylabel('h1[n]');
-title("Flat Top Function");
+title("Flat Top");
 subplot(223); stem(n,h2); grid on; ylabel('h2[n]');
-title("Cheb Function");
+title("Cheb");
 subplot(224); stem(n,h3); grid on; ylabel('h3[n]');
-title("Blackman-Harris Function");
+title("Blackman-Harris");
 figure(2);
 plot(F,20*log10(abs(H0)),...
 F,20*log10(abs(H1)),...
