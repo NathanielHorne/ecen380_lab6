@@ -31,9 +31,13 @@ H2 = polyval(h2,E);
 H3 = polyval(h3,E);
 figure(1);
 subplot(221); stem(n,h0); grid on; ylabel('hideal[n]');
+title("Simple Rect Function");
 subplot(222); stem(n,h1); grid on; ylabel('h1[n]');
+title("Flat Top Function");
 subplot(223); stem(n,h2); grid on; ylabel('h2[n]');
+title("Cheb Function");
 subplot(224); stem(n,h3); grid on; ylabel('h3[n]');
+title("Blackman-Harris Function");
 figure(2);
 plot(F,20*log10(abs(H0)),...
 F,20*log10(abs(H1)),...
@@ -42,4 +46,4 @@ F,20*log10(abs(H3)));
 grid on;
 xlabel('frequency (cycles/sample)'); ylabel('magnitude (dB)');
 legend('H0(\Omega): simple rect. window','H1(\Omega): Flat top ','H2(\Omega): Cheb','H3(\Omega): Blackman-Harris');
-title("Four randomly selected window functions");
+title("Freq. Response for Selected Window Functions");
