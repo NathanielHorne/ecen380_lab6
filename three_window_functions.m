@@ -1,3 +1,8 @@
+%%NOTE: WE WILL BE USING THE HAMMING WINDOW. USE
+% THE HAMMING WINDOW YOU FOOL
+% THE HAMMING WINDOW IS YOUR FRIEND.
+
+
 N = 40;
 n = (-N:N)'; % Make this a column vector to make hideal
 % a column vector because MATLAB's window
@@ -36,4 +41,5 @@ F,20*log10(abs(H2)),...
 F,20*log10(abs(H3)));
 grid on;
 xlabel('frequency (cycles/sample)'); ylabel('magnitude (dB)');
-legend('H0(\Omega)','H1(\Omega)','H2(\Omega)','H3(\Omega)');
+legend('H0(\Omega): simple rect. window','H1(\Omega): Flat top ','H2(\Omega): Cheb','H3(\Omega): Blackman-Harris');
+title("Four randomly selected window functions");
